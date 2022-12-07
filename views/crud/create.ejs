@@ -1,0 +1,24 @@
+<%-include('./crudHeader.ejs')%>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6" style="border: 10px solid #0dcaf0;border-radius: 10px;padding: 15px;">
+            <h3 class="text-center fst-italic mb-3">Create</h3>
+            <div class="mb-3">
+                <label for="name">NAME</label>
+                <input type="text" name="name" id="name" class="form-control" placeholder="Enter Name">
+            </div>
+            <div class="mb-3">
+                <label for="email">EMAIL</label>
+                <input type="text" name="email" id="email" class="form-control" placeholder="Enter Email">
+            </div>
+            <div class="mb-3">
+                <label for="phone">PHONE</label>
+                <input type="text" name="phone" id="phone" class="form-control" placeholder="Enter Phone">
+            </div>
+            <button class="btn btn-info">Submit</button>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+</div>
+<%-include('./crudFooter.ejs')%>

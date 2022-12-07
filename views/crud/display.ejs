@@ -1,0 +1,38 @@
+<%-include('./crudHeader.ejs')%>
+<div class="container mt-5">
+    <div class="row" style="border: 10px solid #0dcaf0;border-radius: 10px;padding: 15px;">
+        <div class="col-md-12" style="overflow-x: auto;">
+            <h3 class="text-center fst-italic mb-3">Display</h3>
+            <table class="table table-striped">
+                <thead>
+                    <th>#</th>
+                    <th>NAME</th>
+                    <th>EMAIL</th>
+                    <th>PHONE</th>
+                    <th>ACTION</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1.</td>
+                        <td>Ankur</td>
+                        <td>ankur@gmail.com</td>
+                        <td>1234567890</td>
+                        <td class="d-flex flex-wrap" style="gap:10px">
+                            <button class="btn btn-primary">View</button>
+                            <button class="btn btn-warning">Edit</button>
+                            <button class="btn btn-danger">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <th>#</th>
+                    <th>NAME</th>
+                    <th>EMAIL</th>
+                    <th>PHONE</th>
+                    <th>ACTION</th>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+</div>
+<%-include('./crudFooter.ejs')%>

@@ -1,0 +1,52 @@
+<%-include('./blogHeader.ejs')%>
+<%-include('./slider.ejs')%>
+
+<!-- main body starts -->
+<div class="container">
+    <div class="row mt-4 mb-4">
+        <div class="col-md-5">
+            <img src="/images/contactUs.jpg" class="w-100 rounded shadow" alt="">
+        </div>
+        <div class="col-md-7">
+            <h1 class="text-center mt-3 mb-3 headingText"><i class="fa-solid fa-phone"></i> Contact Us</h1>
+            <form action="contactFormMsgStore" method="POST">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="fName" role="button"><i class="fa-solid fa-user"></i> First Name</label>
+                            <input type="text" name="firstName" id="fName" class="form-control" placeholder="Enter First Name">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="lName" role="button"><i class="fa-solid fa-user"></i> Last Name</label>
+                            <input type="text" name="lastName" id="lName" class="form-control" placeholder="Enter Last Name">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="email" role="button"><i class="fa-solid fa-envelope"></i> Email</label>
+                            <input type="text" name="email" id="email" class="form-control" placeholder="Enter Email">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="phone" role="button"><i class="fa-solid fa-square-phone"></i> Phone</label>
+                            <input type="text" name="phone" id="phone" class="form-control" placeholder="Enter Phone">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="mb-3">
+                        <label for="message" role="button"><i class="fa-solid fa-messages"></i> Message</label>
+                        <textarea type="text" name="message" id="message" class="form-control" placeholder="Enter Message"></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="button-85"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- main body ends -->
+
+<%-include('./blogFooter.ejs')%>

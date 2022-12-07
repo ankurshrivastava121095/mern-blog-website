@@ -1,0 +1,21 @@
+<%-include('./blogHeader.ejs')%>
+<%-include('./slider.ejs')%>
+
+<!-- main body starts -->
+<div class="container">
+    <h1 class="text-center mt-3 mb-3 headingText"><i class="fa-solid fa-blog"></i>logs</h1>
+    <div class="row mb-4">
+        <% b.forEach((item)=>{ %>
+        <div class="col-md-4 mt-4">
+            <img src="<%= item.image.url %>" style="height:250px;" class="w-100 rounded shadow" alt="">
+            <h5 class="text-center mt-2"><%= item.title.slice(0,30) %>...</h5>
+            <p class="text-center mt-2"><%= item.createdAt.toLocaleDateString() %></p>
+            <p class="text-center"><%= item.description.slice(0,90) %>...</p>
+            <p class="text-center"><a href="/blogDetail/<%= item._id %>" class="text-decoration-none btn button-85"><i class="fa-solid fa-circle-info"></i> Read More</a></p>
+        </div>
+        <% }) %>
+    </div>
+</div>
+<!-- main body ends -->
+
+<%-include('./blogFooter.ejs')%>

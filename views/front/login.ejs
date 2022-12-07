@@ -1,0 +1,41 @@
+<%-include('./blogHeader.ejs')%>
+
+<!-- main body starts -->
+<div class="container mb-5">
+    <div class="row mt-4 mb-4">
+        <div class="col-md-5">
+            <img src="/images/loginImage.png" class="w-100" alt="">
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-6 border border-dark rounded shadow-lg">
+            <h1 class="text-center mt-5 mb-3 headingText"><i class="fa-solid fa-right-to-bracket"></i> Login</h1>
+            <% if(succMessage.length > 0){ %>
+                <div class="alert alert-success">
+                    <%= succMessage %>
+                </div>
+            <% } %>
+            <% if(errMsg.length > 0){ %>
+                <div class="alert alert-danger">
+                    <%= errMsg %>
+                </div>
+            <% } %>
+            <form action="/verifyLogin" method="POST">
+                <div class="mb-3">
+                    <label for="email" role="button"><i class="fa-solid fa-envelope"></i> Email</label>
+                    <input type="text" class="form-control" name="email" id="email" placeholder="Enter Email">
+                </div>
+                <div class="mb-3">
+                    <label for="password" role="button"><i class="fa-solid fa-key"></i> Password</label>
+                    <input type="text" class="form-control" name="password" id="password" placeholder="Enter Password">
+                    <p role="button" class="mt-3 mb-5"><i class="fa-solid fa-eye"></i> Show/Hide Password</p>
+                </div>
+                <button type="submit" class="btn button-85"><i class="fa-solid fa-right-to-bracket"></i> Login</button>
+            </form>
+            <br><br>
+            <center>Don't have account ? <a href="/admin/register">Click here</a> to Signup</center>
+        </div>
+    </div>
+</div>
+<!-- main body ends -->
+
+<%-include('./blogFooter.ejs')%>

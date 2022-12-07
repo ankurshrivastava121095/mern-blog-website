@@ -1,0 +1,30 @@
+<%- include('../../front/blogHeader.ejs') %>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <%- include('../components/adminSidebar.ejs') %>
+              
+            <div id="main">
+                <button class="openbtn" onclick="openNav()">☰ </button>  
+                <h2>Category Edit</h2>
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6 border-maroon rounded box-shadow p-3">
+                        <h3 class="text-center">Edit Category</h3>
+                        <form action="/admin/categoryUpdate/<%= result._id %>" method="POST">
+                            <div class="mb-3">
+                                <label for="catName" role="button">Category Name</label>
+                                <input type="text" id="catName" name="catName" class="form-control" value="<%= result.catName %>">
+                            </div>
+                            <button type="submit" class="text-decoration-none btn button-85">Update</button>
+                        </form>
+                    </div>
+                    <div class="col-md-3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('../../front/blogFooter.ejs') %>

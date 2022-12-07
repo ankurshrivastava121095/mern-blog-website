@@ -1,0 +1,43 @@
+<%-include('./blogHeader.ejs')%>
+
+<!-- main body starts -->
+<div class="container">
+    <div class="row mt-4 mb-4">
+        <div class="col-md-6">
+            <img src="/images/loginImage.png" class="w-100" alt="">
+        </div>
+        <div class="col-md-6 border border-dark rounded shadow-lg">
+            <h1 class="text-center mt-3 mb-3 headingText"><i class="fa-solid fa-user-plus"></i> Signup</h1>
+            <% if(message.length > 0){ %>
+                <div class="alert alert-danger">
+                    <%= message %>
+                </div>
+            <% } %>
+            <form action="/admin/registrationInsert" method="POST">
+                <div class="mb-3">
+                    <label for="name" role="button"><i class="fa-solid fa-user"></i> Name</label>
+                    <input type="text" class="form-control" name="name" id="name" placeholder="Enter Name">
+                </div>
+                <div class="mb-3">
+                    <label for="email" role="button"><i class="fa-solid fa-envelope"></i> Email</label>
+                    <input type="text" class="form-control" name="email" id="email" placeholder="Enter Email">
+                </div>
+                <div class="mb-3">
+                    <label for="password" role="button"><i class="fa-solid fa-key"></i> Password</label>
+                    <input type="text" class="form-control" name="password" id="password" placeholder="Enter Password">
+                </div>
+                <div class="mb-3">
+                    <label for="conPassword" role="button"><i class="fa-solid fa-key"></i> Confirm Password</label>
+                    <input type="text" class="form-control" name="conPassword" id="conPassword" placeholder="Enter Confirm Password">
+                </div>
+                <p role="button" class="mt-3 mb-5"><i class="fa-solid fa-eye"></i> Show/Hide Password</p>
+                <button type="submit" class="btn button-85"><i class="fa-solid fa-user-plus"></i> Signup</button>
+            </form>
+            <br><br>
+            <center>Already have account ? <a href="/login">Click here</a> to Login</center>
+        </div>
+    </div>
+</div>
+<!-- main body ends -->
+
+<%-include('./blogFooter.ejs')%>

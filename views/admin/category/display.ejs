@@ -1,0 +1,49 @@
+<%- include('../../front/blogHeader.ejs') %>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <%- include('../components/adminSidebar.ejs') %>
+              
+            <div id="main">
+                <button class="openbtn" onclick="openNav()">☰ </button>  
+                <div class="d-flex flex-wrap align-items-center justify-content-between mt-3 mb-3">
+                    <h2>Category List</h2>
+                    <a href="/admin/category" class="btn button-85"><i class="fa-solid fa-plus"></i> Add New Category</a>
+                </div>
+                <div style="overflow-x: auto;">
+                    <table class="table table-striped" id="myTable">
+                        <thead>
+                            <th>#</th>
+                            <th>TITLE</th>
+                            <th>ACTION</th>
+                        </thead>
+                        <tbody>
+                            <%
+                            var i = 1
+                            result.forEach((item)=>{
+                            %>
+                            <tr>
+                                <td><%= i++ %>.</td>
+                                <td><%= item.catName %></td>
+                                <td class="d-flex flex-nowrap gap10px">
+                                    <a href="/admin/viewCategory/<%= item._id %>" class="btn button-85"><i class="fa-solid fa-eye"></i></a>
+                                    <a href="/admin/editCategory/<%= item._id %>" class="btn button-85"><i class="fa-solid fa-pen-to-square"></i></a>
+                                    <a href="/admin/deleteCategory/<%= item._id %>" class="btn button-85"><i class="fa-solid fa-trash-can"></i></a>
+                                </td>
+                            </tr>
+                            <% }) %>
+                        </tbody>
+                        <tfoot>
+                            <th>#</th>
+                            <th>TITLE</th>
+                            <th>ACTION</th>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('../../front/blogFooter.ejs') %>

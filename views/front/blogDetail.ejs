@@ -1,0 +1,49 @@
+<%-include('./blogHeader.ejs')%>
+
+<!-- main body starts -->
+<div class="container">
+    <div class="row mt-5 mb-5">
+        <div class="col-md-7">
+            <h1><%= result.title %></h1>
+            <p><%= result.createdAt.toLocaleDateString() %></p>
+            <center><img src="<%= result.image.url %>" class="w-100 rounded shadow-lg" alt=""></center>
+            <p class="mt-3 text-justify"><%= result.description %></p>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-4">
+            <div class="row">
+                <div class="col-md-12">
+                    <h4 class="doubleBg text-center pt-2 pb-2 text-white">Recent <i class="fa-solid fa-blog"></i>log</h4>
+                    <%
+                        allBlogs.forEach((item)=>{
+                    %>
+                    <div class="d-flex flex-nowrap gap20px mb-3">
+                        <img src="<%= item.image.url %>" class="rounded shadow-lg" style="width:100px;height:100px;" class="w-50 rounded" alt="">
+                        <div>
+                            <h5><%= item.title.slice(0,15) %>...</h5>
+                            <p class="text-justify"><%= item.description.slice(0,50) %>...<a class="text-decoration-none" href="<%= item._id %>">read more</a></p>
+                        </div>
+                    </div>
+                    <%
+                        })
+                    %>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <h4 class="doubleBg text-center pt-2 pb-2 text-white"><i class="fa-solid fa-list"></i> Categories</h4>
+                <%
+                    j = 1;
+                    categoryData.forEach((catData)=>{
+                %>
+                <a href="#" class="text-decoration-none text-black pb-2"><span>(<%= j++ %>.)</span> <%= catData.catName%></a>
+                <hr>
+                <%
+                    })
+                %>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- main body ends -->
+
+<%-include('./blogFooter.ejs')%>

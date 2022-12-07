@@ -1,0 +1,39 @@
+<%- include('../../front/blogHeader.ejs') %>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <%- include('../components/adminSidebar.ejs') %>
+              
+            <div id="main">
+                <button class="openbtn" onclick="openNav()">☰ </button>  
+                <h2>Blog Edit</h2>
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6 border-maroon rounded box-shadow p-3">
+                        <h3 class="text-center">Edit Blog</h3>
+                        <form action="/admin/blogUpdate/<%= result._id %>" method="POST" enctype='multipart/form-data'>
+                            <div class="mb-3">
+                                <label for="title" role="button">Title</label>
+                                <input type="text" id="title" name="title" class="form-control" value="<%= result.title %>">
+                            </div>
+                            <div class="mb-3">
+                                <label for="description" role="button">Description</label>
+                                <input type="text" id="description" name="description" class="form-control" value="<%= result.description %>">
+                            </div>
+                            <div class="mb-3">
+                                <img src="<%=  result.image.url %>" style="width:150px;height:100px;" alt=""><br>
+                                <label for="image" role="button">Image</label>
+                                <input type="file" id="image" name="image" class="form-control">
+                            </div>
+                            <button type="submit" class="text-decoration-none btn button-85">Update</button>
+                        </form>
+                    </div>
+                    <div class="col-md-3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('../../front/blogFooter.ejs') %>

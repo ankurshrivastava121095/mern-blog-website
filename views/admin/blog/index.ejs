@@ -1,0 +1,38 @@
+<%- include('../../front/blogHeader.ejs') %>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <%- include('../components/adminSidebar.ejs') %>
+              
+            <div id="main">
+                <button class="openbtn" onclick="openNav()">☰ </button>  
+                <h2>Blog</h2>
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6 border-maroon rounded box-shadow p-3">
+                        <h3 class="text-center">Add New Blog</h3>
+                        <form action="/admin/blogInsert" method="POST" enctype='multipart/form-data'>
+                            <div class="mb-3">
+                                <label for="title" role="button">Title</label>
+                                <input type="text" id="title" name="title" class="form-control" placeholder="Enter Title">
+                            </div>
+                            <div class="mb-3">
+                                <label for="description" role="button">Description</label>
+                                <textarea id="description" name="description" class="form-control" rows="6" placeholder="Enter Description"></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="image" role="button">Image</label>
+                                <input type="file" id="image" name="image" class="form-control">
+                            </div>
+                            <button type="submit" class="text-decoration-none btn button-85">Save</button>
+                        </form>
+                    </div>
+                    <div class="col-md-3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('../../front/blogFooter.ejs') %>

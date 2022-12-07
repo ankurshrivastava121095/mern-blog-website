@@ -1,0 +1,242 @@
+*{
+    font-style: italic;
+}
+
+.navbar, .doubleBg, .footer{
+  /* background: linear-gradient(45deg, yellow, purple); */
+  background: #761313;
+}
+
+.footer{
+  bottom: 0;
+  /* position: absolute; */
+  position: inherit;
+}
+
+.logoText
+{
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+      font-size: 190px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.carousel-indicators{
+  display: none!important;
+}
+
+.gap10px{
+  gap: 10px;
+}
+
+.gap20px{
+  gap: 20px;
+}
+
+.fs-30px{
+  font-size: 30px;
+}
+
+.button-85 {
+  background-color: #761313!important;
+  color: #fff!important;
+
+  /* padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation; */
+}
+
+.bg-maroon{
+  background-color: #761313!important;
+}
+
+.button-85:hover{
+  border: 1px solid #761313!important;
+  color: #761313!important;
+  background-color: #fff!important;
+}
+
+.button-85:before {
+  /* content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px; */
+}
+
+/* @keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+} */
+
+.button-85:after {
+  /* z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px; */
+}
+/* 
+.headingText{
+  margin: 40px auto;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 5px;
+  text-shadow: 0 2px 3px #747474, 
+      1px 3px 4px #222, 
+      0 8px 3px #474747, 
+      0 11px 4px #747474,
+      0 14px 4px #565656,
+      0 17px 4px #343434,
+      0 20px 4px #171717
+} */
+
+.text-justify{
+  text-align: justify;
+}
+
+.box-shadow{
+  /* box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px!important; */
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px!important;
+}
+
+.border-maroon{
+  border: 1px solid #761313!important;
+}
+
+thead,tfoot{
+  background-color: #761313!important;
+  color: #fff!important;
+}
+
+/* admin panel sidebar starts */
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  /* background-color: #111; */
+  background-color: #761313;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.sidebar a {
+  font-size: 18px!important;
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  /* color: #818181; */
+  color: #fff;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  /* background-color: #111; */
+  background-color: #761313;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #761313;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+/* admin panel sidebar ends */
+
+#myTable_filter{
+  margin-bottom: 15px!important;
+}
